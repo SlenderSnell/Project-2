@@ -7,11 +7,20 @@
         <script defer src="giphy.js"></script>
     </head>
     <body>
+        <header>
+            <h1>Search4Gifs</h1>
+        </header>
         <main>
-            <label for="search">Search</label>
-            <input id="search" type="search">
-            <button id="goButton">Go</button>
-            <button id="clear">Clear GIFs</button>
+            <div class="tab-content">
+                <div id="searchBox">
+                    <label for="search">Search</label>
+                    <input id="search" placeholder="4Gifs" type="search">
+                    <input id="limitNum" placeholder="#" type="text" value="12">
+                    <button id="goButton">Go</button>
+                    <button id="clear">Clear GIFs</button>
+                </div>
+            </div>
+            
             <div id="out"></div>
         </main>
     </body>

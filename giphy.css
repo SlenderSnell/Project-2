@@ -4,14 +4,39 @@ body {
     background-color: lightblue;
 }
 
+h1 {
+    text-align: center;
+    color: lightblue;
+    background-color: darkblue;
+    text-decoration: underline;
+    margin: 5px 5px 15px;
+    padding: 7px 0;
+}
+
 label {
     font-family: sans-serif;
     font-size: 13px;
     text-decoration: underline;
 }
 
+input#search {
+    width: 150px;
+}
+
+input#limitNum {
+    width: 20px;
+    text-align: center;
+}
+
 div#out {
     height: auto;
     width: auto;
     column-count: 4;
+    padding: 20px 5px 7px;
+}
+
+.center {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
