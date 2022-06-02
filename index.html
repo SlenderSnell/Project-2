@@ -8,16 +8,27 @@
     </head>
     <body>
         <header>
-            <h1>Search4Gifs</h1>
+            <p>Search4Gifs</p>
+            <ul>
+                <li><button id="searchBtn">Search</button></li>
+                <li><button id="aboutBtn">About</button></li>
+                <li><button id="contactBtn">Contact</button></li>
+            </ul>
         </header>
         <main>
             <div class="tab-content">
-                <div id="searchBox">
+                <div id="searchBox" class="active" data-tab-content>
                     <label for="search">Search</label>
                     <input id="search" placeholder="4Gifs" type="search">
                     <input id="limitNum" placeholder="#" type="text" value="12">
                     <button id="goButton">Go</button>
                     <button id="clear">Clear GIFs</button>
+                </div>
+                <div id="aboutBox" data-tab-content>
+                    The about section
+                </div>
+                <div id="contactBox" data-tab-content>
+                    The contact section
                 </div>
             </div>
             

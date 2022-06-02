@@ -4,14 +4,55 @@ body {
     background-color: lightblue;
 }
 
-h1 {
-    text-align: center;
-    color: lightblue;
-    background-color: darkblue;
-    text-decoration: underline;
-    margin: 5px 5px 15px;
-    padding: 7px 0;
+header {
+    background: black;
+    margin: 5px;
+    height: 46px;
 }
+
+p {
+    text-align: left;
+    color: lightblue;
+    text-decoration: underline;
+    margin: 5px 8px 15px;
+    padding: 7px 0;
+    display: inline;
+    font-size: 35px;
+}
+
+ul {
+    list-style-type: none; 
+    width: 100%; 
+    display: inline-flex; 
+    justify-content: flex-end;
+    align-items: center; 
+    margin: 0; 
+    padding: 0;
+    text-align: right;
+    position: relative;
+    bottom: 27px;
+}
+
+li {
+    color: lightblue;
+    text-align: right;
+    display: inline-flex;
+    margin: 0px 5px;
+}
+
+li button {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+    color: lightblue;
+    text-decoration: underline;
+}
+li button:hover {
+    text-decoration: none;
+}
+
+[data-tab-content]{display: none}
+.active[data-tab-content]{display: block}
 
 label {
     font-family: sans-serif;

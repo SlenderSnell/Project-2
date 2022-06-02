@@ -5,6 +5,29 @@ const search = document.getElementById('search');
 const limitNum = document.getElementById('limitNum');
 const out = document.getElementById('out');
 
+const searchBtn = document.getElementById('searchBtn');
+const searchBox = document.getElementById('searchBox');
+const aboutBtn = document.getElementById('aboutBtn');
+const aboutBox = document.getElementById('aboutBox');
+const contactBtn = document.getElementById('contactBtn');
+const contactBox = document.getElementById('contactBox');
+
+searchBtn.addEventListener('click', e => {
+    aboutBox.classList.remove('active');
+    contactBox.classList.remove('active');
+    searchBox.classList.add('active');
+})
+aboutBtn.addEventListener('click', e => {
+    searchBox.classList.remove('active');
+    contactBox.classList.remove('active');
+    aboutBox.classList.add('active');
+})
+contactBtn.addEventListener('click', e => {
+    searchBox.classList.remove('active');
+    aboutBox.classList.remove('active');
+    contactBox.classList.add('active');
+})
+
 button.addEventListener('click', e => {
     let input = search.value;
     let inputPlus = input.replace(" ", "+");
