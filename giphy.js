@@ -12,6 +12,7 @@ const aboutBox = document.getElementById('aboutBox');
 const contactBtn = document.getElementById('contactBtn');
 const contactBox = document.getElementById('contactBox');
 
+// tab functionality
 searchBtn.addEventListener('click', e => {
     aboutBox.classList.remove('active');
     contactBox.classList.remove('active');
@@ -28,11 +29,13 @@ contactBtn.addEventListener('click', e => {
     contactBox.classList.add('active');
 })
 
+// gif finder functionality
 button.addEventListener('click', e => {
     let input = search.value;
     let inputPlus = input.replace(" ", "+");
     let limit = limitNum.value;
-    let url = `http://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${inputPlus}&limit=${limit}`;
+    let offset = Math.floor(Math.random() * 51);
+    let url = `http://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${inputPlus}&limit=${limit}&offset=${offset}`;
     console.log(url);
     fetch(url).then(function(res){
         return res.json()
@@ -43,6 +46,7 @@ button.addEventListener('click', e => {
             let gifURL = gifArray[i].images.fixed_height_small.url;
             let newImg = document.createElement('img');
             newImg.setAttribute('src', gifURL);
+            newImg.style.padding = "5px 0px";
             newImg.classList.add('center');
             out.appendChild(newImg);
         }
@@ -52,6 +56,7 @@ button.addEventListener('click', e => {
     })
 })
 
+// clear gifs
 clear.addEventListener('click', e => {
     out.innerHTML = "";
     console.log('Cleared images')
