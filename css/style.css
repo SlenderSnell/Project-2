@@ -114,4 +114,9 @@ div#out {
 }
 
 /* PHONE FORMAT */
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 360px) {
+    li {margin: 0; transform: translateX(-5px)}
+    div#out {column-count: 1}
+    button#goButton {display: block; margin-top: 5px;}
+    button#clear {transform: translate(38px, -21px);}
+}
